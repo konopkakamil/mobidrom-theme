@@ -1,0 +1,22 @@
+{
+    "build": { 
+      "dockerfile": "../docker/mobidp-dev-shell/Dockerfile" 
+    },
+    
+    "customizations": {
+      "vscode": {
+        "extensions": [
+          "ms-python.python",
+				  "donjayamanne.python-environment-manager",
+				  "mgesbert.python-path"
+        ]
+      }
+    },
+
+    "runArgs": ["--add-host=host.docker.internal:host-gateway"],
+    "containerEnv": {
+      "CKAN_INI": "ckanext-mobidrom-theme/test.ini"
+    },
+    "postCreateCommand":"sh ./.devcontainer/install_ckan_dependencies.sh",
+    "forwardPorts": [3000]
+  }

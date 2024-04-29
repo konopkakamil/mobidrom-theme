@@ -1,0 +1,14 @@
+# mobidrom_theme-js:
+#   filter: rjsmin
+#   output: ckanext-mobidrom_theme/%(version)s-mobidrom_theme.js
+#   contents:
+#     - js/mobidrom_theme.js
+#   extra:
+#     preload:
+#       - base/main
+
+# mobidrom_theme-css:
+#   filter: cssrewrite
+#   output: ckanext-mobidrom_theme/%(version)s-mobidrom_theme.css
+#   contents:
+#     - css/mobidrom_theme.css
